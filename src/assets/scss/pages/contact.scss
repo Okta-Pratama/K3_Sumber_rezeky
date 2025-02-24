@@ -1,0 +1,78 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Add your style here
+
+.contact {
+  background-color: white;
+  padding: 8rem 0;
+
+  .container-contact {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #ccc;
+    @include media-breakpoint-up(lg) {
+      max-width: 1200px;
+      padding: 0!important;
+    }
+
+    .contact-details {
+      background-color: #ffcc00;
+      padding: 20px;
+      width: 40%;
+      
+      @include media-breakpoint-down(lg){
+        display: none;
+      }
+
+      p:nth-of-type(odd) {
+        background-color: #ffd700; /* Warna latar kuning */
+        color: white; /* Teks putih */
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+    }
+
+
+    .message-form {
+      padding: 20px;
+      @include media-breakpoint-up(lg){
+        width: 60%;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      button {
+        background-color: #ffcc00;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #e6b800;
+      }
+    }
+  }
+}

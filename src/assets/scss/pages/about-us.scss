@@ -1,0 +1,57 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Add your style here
+.about{
+  color: #343a40;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  gap: 4rem;
+  h3{
+    padding: 1rem;
+  }
+
+  .container-about{
+    .row{
+      .col-md-6{
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .container-peraturan {
+    .peraturan-box {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 2rem;
+      background-color: $white;
+      font-size: 16px;
+      color: #495057;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+  }
+  .container-sejarah {
+    .sejarah-box {
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+      padding: 2rem;
+      background-color: $white;
+      font-size: 16px;
+      color: #495057;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+
+      ul{
+        padding: 0rem 1rem;
+      }
+    }
+  }
+}

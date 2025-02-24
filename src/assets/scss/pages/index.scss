@@ -1,0 +1,173 @@
+// Initialize first
+@import "../init";
+
+// Import files
+@import "home";
+
+// Add your style here
+.gapper {
+    padding-top: 0 !important;
+}
+
+.hero {
+    padding-top: toRem(76.22);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+
+    .container-hero {
+        padding: 8rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero-icon{
+            position: relative;
+            padding: 0.5rem;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img{
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+        
+        .hero-line{
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            .small-line{
+                width: 5vw;
+            }
+            
+        }
+        
+
+        .hero-text {
+            color: white;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title{
+                font-size: 2rem;
+                font-family: 'Inter';
+                font-weight: 600;
+            }
+            .subtitle{
+                font-size: 1rem;
+                font-family: 'Inter';
+                font-weight: 300;
+
+            }
+        }
+
+        
+    }
+}
+
+.about {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .line{
+        position: absolute;
+        z-index: 5;
+        overflow: hidden;
+        width: 30%;
+        top: -15px;
+    }
+    .container-about {
+        display: flex;
+        gap: 2rem;
+        padding: 4rem 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        @include media-breakpoint-down(lg) {
+            text-align: center;
+            flex-direction: column-reverse;
+        }
+        
+        .about-text {
+            color: rgb(0, 0, 0);
+            z-index: 1;
+            font-size: 2rem;
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            @include media-breakpoint-up(lg){
+                align-items: flex-start;
+            }
+            
+            h4 {
+                color: $primary;
+                .about-icon{
+                    height: 3rem;
+                }
+            }
+
+            p {
+                font-size: large;
+                
+                @include media-breakpoint-up(lg) {
+                    border-left: 1px solid $primary;
+                    padding-left: 2rem;
+                }
+
+                
+            }
+            
+            @include media-breakpoint-up(lg) {
+                max-width: 60%;
+            }
+
+            .about-button{
+                padding: 0.5rem 2rem;
+            }
+
+        }
+
+        .about-img {
+            color: rgb(0, 0, 0);
+            font-size: large;
+            z-index: 1;
+            height: max-content;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 70%;
+                transition: transform 0.3s ease-in-out;
+            }
+            img:hover {
+                transform: scale(1.1);
+            }
+
+            @include media-breakpoint-up(lg) {
+                max-width: 40%;
+            }
+        }
+    }
+}

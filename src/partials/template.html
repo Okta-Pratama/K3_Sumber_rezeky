@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+Template Name: - 
+Author: -
+Website: -
+Contact: -
+License: -
+-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K3_Sumber Rezeki</title>
+    <link rel="shortcut icon" href="assets/media/images/K3-YellowBg.png" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <meta
+      property="og:title"
+      content="Penyedia Pekerja Konstruksi Terpercaya - Sumber Rezeki"
+    />
+    <meta
+      property="og:description"
+      content="Temukan pekerja konstruksi profesional untuk proyek Anda. Kami menyediakan tenaga kerja terampil mulai dari tukang hingga teknisi dengan pengalaman bertahun-tahun."
+    />
+
+    <!-- Start::Global Styles (used by all pages) -->
+    <link
+      href="assets/css/styles.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- End::Global Styles -->
+    <!-- Start::Page Styles (used by this page) -->
+    <link class="page-responsive" href="" rel="stylesheet" type="text/css" />
+    <!-- End::Page Styles -->
+    <!-- Start::Global Function (used by all pages) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function isCurrentPage(url) {
+          return window.location.href.includes(url);
+        }
+
+        if (isCurrentPage("index.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/index.css";
+        } else if (isCurrentPage("contact-us.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/contact.css";
+        }else if (isCurrentPage("about-us.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/about-us.css";
+        } else if (isCurrentPage("kesehatanKerja.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/kesehatanKerja.css";
+        } else if (isCurrentPage("keselamatanKerja.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/keselamatanKerja.css";
+        } else if (isCurrentPage("landasanHukum.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/landasanHukum.css";
+        }else if (isCurrentPage("lingkunganKerjaFisik.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/lingkunganKerjaFisik.css";
+        }else if (isCurrentPage("apd.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/apd.css";
+        }else if (isCurrentPage("pp.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/pp.css";
+        }else if (isCurrentPage("organisasi.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/organisasi.css";
+        }else if (isCurrentPage("manajemenResiko.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/manajemenResiko.css";
+        }else if (isCurrentPage("audit.html")) {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/audit.css";
+        }else {
+          document.querySelector(".page-responsive").href =
+            "assets/css/pages/index.css";
+        }
+      });
+    </script>
+    <!-- End::Global Function -->
+    <!-- Start::Page font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <!-- End::Page font awesome -->
+    <!-- Start::Page Animated On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- End::Page Animated On Scroll -->
+    <!-- Start::Page Animated On Scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- End::Page Animated On Scroll -->
+  </head>
+
+  <body>
+    <!-- Start:: header navbar section -->
+    {{> layout/header.html}}
+    <!-- End:: header navbar section -->
+
+    <section class="gapper"></section>
+    {{#if @partial-block}} {{> @partial-block }} {{/if}}
+
+    <!-- Start:: header navbar section -->
+    {{> layout/footer.html}}
+    <!-- End:: header navbar section -->
+
+    <!-- Start::Global Bundle Scripts (used by all pages) -->
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!-- End::Global Bundle Scripts -->
+    <!-- Start::Page Scripts (used by this page) -->
+    <script src="assets/js/pages/home.js"></script>
+    <!-- End::Page Scripts -->
+    <!-- Start::Page AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- End::Page AOS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 1,
+              adaptiveHeight: true
+            });
+        });
+    </script>
+  </body>
+</html>

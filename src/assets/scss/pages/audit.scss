@@ -1,0 +1,28 @@
+// Initialize first
+@import "../init";
+
+// Import files  
+@import "home";
+
+// Add your style here
+
+.audit-section{
+    background-color: white !important;
+    .container-audit{
+        padding : 4rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        .section-title{
+            border-bottom: 5px solid $primary;
+        }
+        
+        .yellow-button{
+            a{
+                color: $white !important;
+            }
+        }
+        
+    }
+}

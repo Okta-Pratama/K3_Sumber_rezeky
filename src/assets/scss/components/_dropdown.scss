@@ -1,0 +1,33 @@
+/* Drop-down wrapper for hover effect */
+.drop-down-wrapper {
+  position: relative;
+  display: inline-block;
+  transition: all linear .2s;
+}
+
+.drop-down-content {
+  display: none;
+  position: absolute;
+  background-color: #2d2d2d;
+  min-width: 250px;
+  z-index: 77;
+  top: 2rem;
+  clip-path: polygon(0 0,88% 0,100% 8%,100% 100%,14% 100%,0 92%);
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 2rem;
+  
+  a {
+    color: white; 
+    padding: 2rem 2rem;
+    text-decoration: none;
+    display: block;
+    transition: all linear 0.2s;
+  }
+}
+
+
+.drop-down-wrapper:hover .drop-down-content {
+  display: flex;
+}
+

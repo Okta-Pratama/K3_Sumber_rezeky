@@ -1,0 +1,100 @@
+footer{
+  background-color: rgb(10 10 10);
+  position: relative;
+  overflow: hidden;
+  
+  .container-footer{
+    padding: 2rem 0 0 0;
+
+    .bg-footer{
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      min-width: 100%;
+      max-width: 110%;
+      min-height: 100%;
+      opacity: 10%;
+    }
+    .footer-info{
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      @include media-breakpoint-up(xs-2){
+        padding: 2rem;
+      }
+      @include media-breakpoint-down(lg){
+        grid-template-columns: repeat(1,1fr);
+      }
+      gap: 2rem;
+      .info{
+        display: flex;
+        flex-direction: column;
+        gap: toRem(14);
+        padding: 0 1rem;
+
+        .spacer-info{
+          position: relative;
+          img{
+            position: absolute;
+            top: -1rem;
+          }
+        }
+
+        .footer-title{
+          font-size: toRem(20);
+          font-weight: 500;
+          color: white;
+        }
+        .footer-title-1{
+          font-size: toRem(18);
+          font-weight: 500;
+          color: rgb(255, 255, 255);
+        }
+        .footer-text{
+          font-size: toRem(14);
+          font-weight: 200;
+          color: rgb(255, 255, 255);
+        }
+        .footer-icon{
+          padding: 0.5rem;
+          background-color: white;
+          color: rgb(0, 0, 0);
+          border-radius: 50%;
+          i{
+            display: flex;
+            height: toRem(18);
+            width: toRem(18);
+            text-align: center;
+            justify-content: center;
+            font-size: toRem(18);
+          }
+          
+        }
+        
+        .footer-wrapper{
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          opacity: 70%;
+          transition: all linear .4s;
+        }
+        .footer-wrapper:hover{
+          opacity: 100%;
+        }
+      }
+    }
+    .footer-cr{
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      font-weight: 100;
+      padding: 1rem;
+      width: 100%;
+      border-top: toRem(1) solid rgb(79, 79, 79);
+      color: rgb(255, 255, 255);
+      margin-top: 2rem;
+    }
+  }
+}
