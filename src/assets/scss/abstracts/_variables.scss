@@ -30,10 +30,10 @@ $red-pale: #FFD1CB;
 // scss-docs-end accent-color-variables
 
 // scss-docs-start theme-color-variables
-$primary: rgb(255, 217, 0);
-$secondary: $sky-blue-crayola;
+$primary: $yellow;
+$secondary: $blue;
 $success: $green;
-$info: $blue;
+$info: $blue-pale;
 $warning: $yellow;
 $danger: $red;
 $light: $black-10;
@@ -41,10 +41,10 @@ $dark: $black-80;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start shadow-color-variables
-$shadow-color: rgba(159, 165, 174, 0.08);
-$shadow-hover-color: rgba(0, 0, 0, 0.08);
-$shadow-featured-hover-color: rgba(112, 109, 248, 0.1);
-$shadow-blue-hover-color: rgba(112, 109, 248, 0.08);
+$shadow-color: rgba(15, 23, 42, 0.08);
+$shadow-hover-color: rgba(15, 23, 42, 0.14);
+$shadow-featured-hover-color: rgba(112, 109, 248, 0.15);
+$shadow-blue-hover-color: rgba(38, 164, 255, 0.15);
 // scss-docs-end shadow-color-variables
 
 
@@ -166,26 +166,26 @@ $border-color-translucent: rgba($black, .175);
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: 10px;
-$border-radius-xs: 2px;
-$border-radius-sm: 5px;
-$border-radius-lg: 15px;
-$border-radius-xl: 20px;
-$border-radius-2xl: 25px;
+$border-radius: 12px;
+$border-radius-xs: 4px;
+$border-radius-sm: 8px;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
+$border-radius-2xl: 32px;
 // scss-docs-end border-radius-variables
 
 // scss-docs-start box-shadow-variables
-$box-shadow: 0px 12px 36px $shadow-color;
-$box-shadow-hover: 0px 16px 28px $shadow-hover-color;
-$box-shadow-featured-hover: 0px 16px 28px $shadow-featured-hover-color;
-$box-shadow-blue-hover: 0px 16px 28px $shadow-blue-hover-color;
+$box-shadow: 0px 8px 24px $shadow-color;
+$box-shadow-hover: 0px 12px 32px $shadow-hover-color;
+$box-shadow-featured-hover: 0px 16px 32px $shadow-featured-hover-color;
+$box-shadow-blue-hover: 0px 16px 32px $shadow-blue-hover-color;
 // scss-docs-end box-shadow-variables
 
 
 // Typography
 
 // scss-docs-start font-variables
-$font-family-base: 'inter';
+$font-family-base: 'Outfit', sans-serif;
 
 $font-size-base: toRem(16);
 $font-size-sm: toRem(14);
@@ -193,10 +193,10 @@ $font-size-lg: toRem(18);
 
 $font-weight-normal: 400;
 $font-weight-semibold: 500;
-$font-weight-bold: 700;
+$font-weight-bold: 600;
 $font-weight-base: $font-weight-normal;
 
-$line-height-base: 1.88;
+$line-height-base: 1.6;
 $line-height-sm: 1.5;
 $line-height-lg: 1.56;
 // scss-docs-end font-variables

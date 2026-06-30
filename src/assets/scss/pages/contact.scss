@@ -7,71 +7,125 @@
 // Add your style here
 
 .contact {
-  background-color: white;
-  padding: 8rem 0;
+  background-color: $body-bg;
+  padding: 6rem 0;
 
   .container-contact {
     display: flex;
     width: 100%;
     margin: auto;
-    border: 1px solid #ccc;
+    background-color: $white;
+    border-radius: $border-radius-xl;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+
     @include media-breakpoint-up(lg) {
-      max-width: 1200px;
-      padding: 0!important;
+      max-width: 1100px;
+      padding: 0 !important;
     }
 
     .contact-details {
-      background-color: #ffcc00;
-      padding: 20px;
+      background: linear-gradient(135deg, $primary 0%, darken($primary, 10%) 100%);
+      padding: 3rem;
       width: 40%;
-      
-      @include media-breakpoint-down(lg){
+      color: $black;
+
+      @include media-breakpoint-down(lg) {
         display: none;
       }
 
-      p:nth-of-type(odd) {
-        background-color: #ffd700; /* Warna latar kuning */
-        color: white; /* Teks putih */
-        border-radius: 5px;
-        transition: all 0.3s ease;
-      }
-      
-      h2 {
-        margin-top: 0;
+      h3 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: $black;
       }
 
       p {
-        margin: 10px 0;
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      p:nth-of-type(odd) {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba($black, 0.7);
+        font-weight: 600;
+        margin-bottom: 0.25rem;
       }
     }
 
-
     .message-form {
-      padding: 20px;
-      @include media-breakpoint-up(lg){
+      padding: 3rem;
+
+      @include media-breakpoint-up(lg) {
         width: 60%;
       }
-      h2 {
-        margin-top: 0;
+
+      h3 {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: $black;
       }
-      button {
-        background-color: #ffcc00;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-size: 16px;
+
+      > p {
+        color: $black-60;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
       }
+
+      label {
+        font-weight: 600;
+        color: $black-80;
+        margin-bottom: 0.5rem;
+        display: block;
+        font-size: 0.9rem;
+      }
+
       input,
       textarea {
         width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid $border-color;
+        border-radius: $border-radius-sm;
+        font-family: $font-family-base;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $primary;
+          box-shadow: 0 0 0 3px rgba($primary, 0.2);
+        }
       }
-      button:hover {
-        background-color: #e6b800;
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button {
+        background-color: $primary;
+        color: $black;
+        font-weight: 700;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: $border-radius-sm;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        width: 100%;
+
+        &:hover {
+          background-color: darken($primary, 5%);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba($primary, 0.4);
+        }
       }
     }
   }
